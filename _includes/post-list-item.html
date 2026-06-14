@@ -1,0 +1,19 @@
+<li class="group">
+  <a href="{{ include.post.url | relative_url }}"
+     class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-6 py-5 hover:bg-surface-container-low transition-colors px-2 -mx-2 rounded-sm">
+    <span class="flex-1 flex items-baseline gap-3">
+      <span class="font-semibold tracking-[-0.02em] text-on-surface group-hover:underline">
+        {{ include.post.title }}
+      </span>
+      {% if include.post.categories.size > 0 %}
+        <span class="text-xs uppercase tracking-wide text-on-surface-variant">
+          {{ include.post.categories | join: ", " }}
+        </span>
+      {% endif %}
+    </span>
+    <time datetime="{{ include.post.date | date_to_xmlschema }}"
+          class="shrink-0 text-sm text-on-surface-variant tabular-nums">
+      {{ include.post.date | date: "%b %-d, %Y" }}
+    </time>
+  </a>
+</li>

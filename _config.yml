@@ -1,14 +1,11 @@
-title: "IS, GRC & AI Governance Insights"
+title: "AI Governance & Insights"
 description: "Insights, governance notes, and writing on AI regulation and risk."
 baseurl: "" # e.g. "/repo-name" if served from a project page, otherwise leave empty
-url: "https://docsouley.github.io"
+url: "https://yourusername.github.io"
 
 # --- Build settings ---
 markdown: kramdown
 permalink: /:title/
-
-paginate: 6
-paginate_path: "/page/:num/"
 
 collections:
   pages:
@@ -30,18 +27,18 @@ defaults:
 nav:
   - title: "Home"
     url: "/"
-  - title: "Bio"
-    url: "/bio/"
+  - title: "Archive"
+    url: "/archive/"
   - title: "Insights"
     url: "/insights/"
-  - title: "Governance"
-    url: "/governance/"
+  - title: "Bio"
+    url: "/bio/"
 
 # --- Plugins ---
 plugins:
-  - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-feed
 
 exclude:
   - Gemfile
