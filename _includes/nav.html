@@ -1,0 +1,18 @@
+<header class="border-b border-outline-variant bg-surface-container-lowest">
+  <div class="mx-auto max-w-[1200px] px-6 md:px-16 flex items-center justify-between h-16">
+    <a href="{{ '/' | relative_url }}" class="font-bold tracking-tight text-on-surface text-lg">
+      {{ site.title }}
+    </a>
+    <nav class="flex gap-1">
+      {% for item in site.nav %}
+        {% assign clean_url = item.url | remove: "/" %}
+        {% assign clean_page = page.url | remove: "/" %}
+        <a href="{{ item.url | relative_url }}"
+           class="px-4 py-2 text-sm font-medium rounded-sm transition-colors hover:bg-surface-container-low
+                  {% if clean_page == clean_url %}text-on-surface{% else %}text-on-surface-variant{% endif %}">
+          {{ item.title }}
+        </a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<div class="max-w-[760px] mx-auto">
+
+  {% if page.intro %}
+    <p class="text-on-surface-variant mb-12">{{ page.intro }}</p>
+  {% endif %}
+
+  <ul class="divide-y divide-outline-variant border-t border-b border-outline-variant">
+    {% for post in paginator.posts %}
+      <li class="group">
+        <a href="{{ post.url | relative_url }}"
+           class="flex items-baseline justify-between gap-6 py-5 hover:bg-surface-container-low transition-colors px-2 -mx-2 rounded-sm">
+          <span class="font-semibold tracking-[-0.02em] text-on-surface group-hover:underline">
+            {{ post.title }}
+          </span>
+          <time datetime="{{ post.date | date_to_xmlschema }}"
+                class="shrink-0 text-sm text-on-surface-variant tabular-nums">
+            {{ post.date | date: "%b %-d, %Y" }}
+          </time>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% if paginator.total_pages > 1 %}
+    <nav class="flex items-center justify-between mt-10 text-sm">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}"
+           class="px-4 py-2 border border-outline-variant rounded-sm hover:bg-surface-container-low transition-colors">
+          &larr; Newer
+        </a>
+      {% else %}
+        <span></span>
+      {% endif %}
+
+      <span class="text-on-surface-variant">
+        Page {{ paginator.page }} of {{ paginator.total_pages }}
+      </span>
+
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}"
+           class="px-4 py-2 border border-outline-variant rounded-sm hover:bg-surface-container-low transition-colors">
+          Older &rarr;
+        </a>
+      {% else %}
+        <span></span>
+      {% endif %}
+    </nav>
+  {% endif %}
+
+</div>

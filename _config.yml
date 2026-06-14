@@ -1,3 +1,50 @@
-title: DocSouley's Blog
-author: Soulaiman Hajjaj DBA(c) MBA Msc CISM CISA CRISC
-description: A simple blog about AI, Gouvernance, Risk and Information Security
+title: "IS, GRC & AI Governance Insights"
+description: "Insights, governance notes, and writing on AI regulation and risk."
+baseurl: "" # e.g. "/repo-name" if served from a project page, otherwise leave empty
+url: "https://docsouley.github.io"
+
+# --- Build settings ---
+markdown: kramdown
+permalink: /:title/
+
+paginate: 6
+paginate_path: "/page/:num/"
+
+collections:
+  pages:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# --- Navigation (used in _includes/nav.html) ---
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "Bio"
+    url: "/bio/"
+  - title: "Insights"
+    url: "/insights/"
+  - title: "Governance"
+    url: "/governance/"
+
+# --- Plugins ---
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md

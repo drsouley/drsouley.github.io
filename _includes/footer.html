@@ -1,0 +1,14 @@
+<footer class="border-t border-outline-variant mt-20">
+  <div class="mx-auto max-w-[1200px] px-6 md:px-16 py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <p class="text-sm text-on-surface-variant">
+      &copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.
+    </p>
+    <nav class="flex gap-4 text-sm">
+      {% for item in site.nav %}
+        <a href="{{ item.url | relative_url }}" class="text-on-surface-variant hover:text-on-surface transition-colors">
+          {{ item.title }}
+        </a>
+      {% endfor %}
+    </nav>
+  </div>
+</footer>

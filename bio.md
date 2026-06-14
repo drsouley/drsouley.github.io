@@ -1,18 +1,13 @@
 ---
-title: About Me
-layout: default
+title: Bio
+layout: page
+permalink: /bio/
 ---
 
-## Hi there! 👋
+Write a short professional bio here. Two or three paragraphs covering your background, focus areas, and current work in AI governance and risk.
 
-I'm **{{ site.author }}**, and this is my first blog.
+## Focus Areas
 
-### A few things about me:
-- I'm learning how to code
-- I love reading and writing
-- This blog is built with Jekyll on GitHub Pages
-
-### Why I started blogging:
-I want to share what I learn and connect with others on the same journey.
-
-Thanks for visiting! 😊
+- AI governance and regulatory frameworks
+- Information security and risk management
+- Responsible AI in the workplace
