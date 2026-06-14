@@ -1,7 +1,8 @@
 title: "AI Governance & Insights"
 description: "Insights, governance notes, and writing on AI regulation and risk."
+author: " Soulaiman Hajjaj , DBA(c) MBA Msc CISM CISA CRISC"
 baseurl: "" # e.g. "/repo-name" if served from a project page, otherwise leave empty
-url: "https://yourusername.github.io"
+url: "https://drsouley.github.io"
 
 # --- Build settings ---
 markdown: kramdown

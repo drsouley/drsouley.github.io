@@ -28,3 +28,7 @@ After 20+ years across IT operations and security, I've sat on both sides: the p
 - Who can reach our data right now?
 - What proof did we demand — and when did we last check it?
 - If they're breached tonight, do we find out in minutes or in months?
+
+
+The fix isn't a bigger questionnaire. It's a shift in what you measure: stop scoring vendors on whether they passed an audit, and start scoring your own ability to see what they're doing and shut it off when it goes wrong.
+So pick your most critical vendor — the one with the deepest access — and ask your team one thing this week: if they were breached tonight, how long until we knew, and what could we actually do about it? If the answer is a shrug, you've found where to start.
